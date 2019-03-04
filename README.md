@@ -99,7 +99,7 @@ ansible-playbook ansible-discourse/playbooks/main.yml
 
 cd /var/discourse
 
-./launcher start app
+./launcher rebuild app
 (So no config questions)
 
 
