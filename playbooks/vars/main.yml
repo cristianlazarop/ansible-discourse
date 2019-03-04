@@ -1,0 +1,3 @@
+
+# where to install discourse
+discourse_location: /var/discourse
