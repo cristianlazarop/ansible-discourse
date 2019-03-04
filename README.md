@@ -90,16 +90,16 @@ git clone https://github.com/cristianlazarop/ansible-discourse.git
 
 sudo su
 
-ansible-galaxy install -r requirements.yml
+ansible-galaxy install -r ansible-discourse/requirements.yml
 
 
-ansible-playbook playbooks/main.yml 
+ansible-playbook ansible-discourse/playbooks/main.yml
 (Couple of times)
 
 
 cd /var/discourse
 
-./launcher rebuild app
+./launcher start app
 (So no config questions)
 
 
