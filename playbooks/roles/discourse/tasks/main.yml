@@ -3,7 +3,7 @@
   service: 
     name: docker 
     state: restarted
-  sudo: yes
+  become: true
 
 - name: add discourse user
   user: name=discourse groups=sudo,admin
@@ -22,12 +22,6 @@
 
 - name: install requirements
   command: ansible-galaxy install -r ansible-discourse/requirements.yml
-  args:
-    chdir: "{{ git_location }}"
-  become: true
-
-- name: execute playbook
-  command: ansible-playbook ansible-discourse/playbooks/main.yml
   args:
     chdir: "{{ git_location }}"
   become: true
