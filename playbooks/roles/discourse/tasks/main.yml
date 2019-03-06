@@ -20,11 +20,6 @@
   file: path={{ discourse_location }} owner=discourse group=discourse recurse=yes
   register: discourse_copied
 
-- name: install requirements
-  command: ansible-galaxy install -r ansible-discourse/requirements.yml
-  args:
-    chdir: "{{ git_location }}"
-  become: true
 
 - name: rebuild discourse
   command: ./launcher rebuild app
