@@ -1,7 +1,7 @@
 
 
 git clone https://github.com/cristianlazarop/ansible-discourse.git
-
+test
 sudo su
 
 ansible-galaxy install -r ansible-discourse/requirements.yml
